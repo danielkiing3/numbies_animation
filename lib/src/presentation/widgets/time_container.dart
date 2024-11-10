@@ -36,56 +36,56 @@ class TimeContainer extends StatelessWidget {
           Platform.isAndroid ? 10 + (animation * 10) : 20 + (animation * 20),
         ),
       ),
-      // child: Align(
-      //   alignment: aligment,
-      //   // alignmentTween.evaluate(
-      //   //   AlwaysStoppedAnimation(animation),
-      //   // ),
-      //   child: Transform.scale(
-      //     scale: 1 + (animation * 1.5),
-      //     child: Column(
-      //       crossAxisAlignment: CrossAxisAlignment.start,
-      //       mainAxisSize: MainAxisSize.min,
-      //       children: [
-      //         // -- Actual Time
-      //         Text(
-      //           time.timeInString,
-      //           style: const TextStyle(
-      //             color: Colors.white,
-      //             fontSize: 32,
-      //           ),
-      //         ),
-      //         const SizedBox(height: 4),
+      child: Align(
+        alignment: aligment,
+        // alignmentTween.evaluate(
+        //   AlwaysStoppedAnimation(animation),
+        // ),
+        child: Transform.scale(
+          scale: 1 + (animation * 1.5),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              // -- Actual Time
+              Text(
+                time.timeInString,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 32,
+                ),
+              ),
+              const SizedBox(height: 4),
 
-      //         // -- Time Count
-      //         Row(
-      //           mainAxisSize: MainAxisSize.min,
-      //           children: List.generate(6, (index) {
-      //             if (index + 1 <= time.timeCount) {
-      //               return Container(
-      //                 height: 6,
-      //                 width: 10,
-      //                 decoration: const BoxDecoration(
-      //                   shape: BoxShape.circle,
-      //                   color: Colors.white,
-      //                 ),
-      //               );
-      //             } else {
-      //               return Container(
-      //                 height: 6,
-      //                 width: 10,
-      //                 decoration: BoxDecoration(
-      //                   shape: BoxShape.circle,
-      //                   color: Colors.white.withOpacity(0.7),
-      //                 ),
-      //               );
-      //             }
-      //           }),
-      //         )
-      //       ],
-      //     ),
-      //   ),
-      // ),
+              // -- Time Count
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: List.generate(6, (index) {
+                  if (index + 1 <= time.timeCount) {
+                    return Container(
+                      height: 6,
+                      width: 10,
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.white,
+                      ),
+                    );
+                  } else {
+                    return Container(
+                      height: 6,
+                      width: 10,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.white.withOpacity(0.7),
+                      ),
+                    );
+                  }
+                }),
+              )
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
