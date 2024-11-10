@@ -18,7 +18,7 @@ class ModalContent extends StatefulWidget {
 class _ModalContentState extends State<ModalContent>
     with SingleTickerProviderStateMixin {
   /// Constants
-  final int animationTime = 500;
+  final int animationTime = 250;
   final Curve animationCurve = Curves.slowMiddle;
 
   /// The value to show if the content is expanding
