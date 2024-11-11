@@ -14,6 +14,10 @@ dependencies:
 
   cupertino_icons: ^1.0.8
 
+  # Animation String
+  # Implement to make the animation string more fluid or just write a custom String simulation
+  sprung: ^3.0.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -22,34 +26,3 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-
-  
-  
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
