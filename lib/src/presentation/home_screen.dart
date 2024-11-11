@@ -19,6 +19,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
+  /// Function to open the modal overlay
   void showModal(BuildContext context) {
     showModalBottomSheet(
       context: context,

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 @immutable
+
+/// Custom model for the displayed Time
 class TimeModel {
   final int time;
   final Color color;
@@ -12,6 +14,7 @@ class TimeModel {
     required this.timeCount,
   });
 
+  // Get the time value in a string format "5m"
   String get timeInString => "${time}m";
 }
 

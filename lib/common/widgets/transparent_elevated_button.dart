@@ -35,6 +35,7 @@ class TransparentElevatedButton extends StatelessWidget {
             ),
             duration: Duration(milliseconds: animationValue),
             child: AnimatedSwitcher(
+              //TODO: Add a transition builder to fix the transition
               duration: Duration(milliseconds: animationValue),
               child: Text(
                 isExpanded ? 'Start Session' : 'Cancel',

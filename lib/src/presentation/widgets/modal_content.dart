@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:numbies_animation/common/widgets/transparent_elevated_button.dart';
 import 'package:numbies_animation/src/models/time_model.dart';
 import 'package:numbies_animation/src/presentation/widgets/time_container.dart';
+import 'package:sprung/sprung.dart';
 
 class ModalContent extends StatefulWidget {
   const ModalContent({
@@ -19,7 +20,8 @@ class _ModalContentState extends State<ModalContent>
     with SingleTickerProviderStateMixin {
   /// Constants
   final int animationTime = 250;
-  final Curve animationCurve = Curves.slowMiddle;
+  final Curve animationCurve = Sprung.criticallyDamped;
+  // final Curve animationCurve = Curves.slowMiddle;
 
   /// The value to show if the content is expanding
   bool isExpanding = false;
@@ -43,10 +45,10 @@ class _ModalContentState extends State<ModalContent>
   /// [TimeContainer] in Gridview
   final _stackKey = GlobalKey();
 
-  /// Key for the Animated Container
+  /// Key for the Animated dialog Container
   final _contentKey = GlobalKey();
 
-  /// Animation controller for morphinh animation
+  /// Animation controller for morphing animation
   late AnimationController _controller;
 
   @override
@@ -83,7 +85,7 @@ class _ModalContentState extends State<ModalContent>
     // Prevent selecting another item during animation
     if (isExpanding) return;
 
-    // Getting the neccessary render box
+    // Getting the neccessary render box for positioning
     final RenderBox itemRenderBox =
         _itemKeys[index].currentContext!.findRenderObject() as RenderBox;
     final RenderBox stackRenderBox =
@@ -116,6 +118,7 @@ class _ModalContentState extends State<ModalContent>
         color: Colors.white,
         borderRadius: BorderRadius.circular(Platform.isAndroid ? 20 : 40),
       ),
+      //TODO: Refactor to use just the animation controller
       height: isExpanding ? 400 : 500,
       width: double.infinity,
       child: Stack(
@@ -146,7 +149,7 @@ class _ModalContentState extends State<ModalContent>
                     mainAxisExtent: 90,
                   ),
                   itemCount: itemList.length,
-                  // physics: const NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   padding:
                       const EdgeInsets.symmetric(vertical: 30, horizontal: 16),
                   itemBuilder: (ctx, index) {
