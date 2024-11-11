@@ -1,16 +1,34 @@
-# numbies_animation
+# Numbies Animation Implementation
 
-A new Flutter project.
+Worked inspired by creation of [Antfroze](https://twitter.com/Antfroze) and [Viper](https://twitter.com/ViperScripts) posted by [Spotted in Prod](https://twitter.com/spottedinprod)
 
-## Getting Started
+## Video Demo
+https://github.com/user-attachments/assets/d1934413-9301-4975-bde1-43a256f913d6
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Installation
+To run this app locally, follow these steps:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+1. Clone the repo locally
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+git clone https://github.com/danielkiing3/path_animation.git
+cd headspace_onboarding
+```
+2. Install dependencies:
+```bash
+flutter pub get
+```
+3. Run the app:
+```bash
+flutter run
+```
+
+# 💬 Contact
+If you have any questions or feedback, feel free to reach out:
+
+Email: oluwaferanmiidaniel@gmail.com
+
+GitHub: [danielkiing3](https://github.com/danielkiing3)
+
+Twitter: [@daniel_kiing3](https://twitter.com/daniel_kiing3)
